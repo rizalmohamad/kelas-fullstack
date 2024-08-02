@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav">
+        <h1>Badan Pengurus Harian HMTI</h1>
+      </div>
+    </nav>
+    <main id="scroll-wrapper">
+      <section id="wrapper">
+        <div class="container">
+          <h1>Himpunan Teknologi Informasi</h1>
+          <div class="timeline">
+            <div class="timeline-pointer"></div>
+          </div>
+          <div class="history-card bottom">
+            <h1>Ketua Umum</h1>
+            <p>Mochamad Fikri Baihaki</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="history-card top">
+            <h1>Wakil Ketum</h1>
+            <p>Muhammad Hafid Ali</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-pointer"></div>
+            <div class="timeline-pointer"></div>
+          </div>
+          <div class="history-card bottom">
+            <h1>Sekertaris</h1>
+            <p>Saepul Ikhtirom</p>
+            <p>Davina Zahra</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="history-card top">
+            <h1>Bendahara</h1>
+            <p>Hendriko Dharma Putra</p>
+            <p>Riski Syahputra</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-pointer"></div>
+            <div class="timeline-pointer"></div>
+          </div>
+          <div class="history-card bottom">
+            <h1>SDM</h1>
+            <p>Imam Nugraha</p>
+            <p>Nova Mayang Sari</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="history-card top">
+            <h1>Humas Internal</h1>
+            <p>Mohammad Yusuf Reza</p>
+            <p>Noval Nizar</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-pointer"></div>
+            <div class="timeline-pointer"></div>
+          </div>
+          <div class="history-card bottom">
+            <h1>Humas Eksternal</h1>
+            <p>Fahrizal hami</p>
+            <p>Steven Cornelius Marcus</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="history-card top">
+            <h1>Kominfo</h1>
+            <p>Salsabila Nida Azzahra</p>
+            <p>Aliskha Gumaisari</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-pointer"></div>
+            <div class="timeline-pointer"></div>
+          </div>
+          <div class="history-card bottom">
+            <h1>Pengembangan</h1>
+            <p>Mohamad Rizal Prasetyo</p>
+            <p>Isna Taryanti</p>
+          </div>
+        </div>
+        <div class="container">
+          <h1>Tahun 2023-2024</h1>
+          <div class="timeline">
+            <div class="timeline-pointer"></div>
+          </div>
+          <div class="history-card bottom">
+            <h1>Akademik</h1>
+            <p>Abdul Aziz</p>
+            <p>Dimas Aditya Panca</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      let scrollWrapper = document.getElementById("scroll-wrapper");
+      let wrapper = document.getElementById("wrapper");
+      for (let i = 0; i < wrapper.children.length; i++) {
+        const div = document.createElement("div");
+        scrollWrapper.appendChild(div);
+      }
+      scrollWrapper.onscroll = () => {
+        wrapper.style.left = "-" + (scrollWrapper.scrollTop / (scrollWrapper.scrollHeight - scrollWrapper.clientTop)) * wrapper.clientWidth + "px";
+      };
+    </script>
+  </body>
+</html>

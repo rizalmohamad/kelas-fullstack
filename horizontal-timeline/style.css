@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 0 30px white;
+}
+.nav {
+    color: white;
+    font-size: 18px;
+    padding: 10px 0;
+}
+#wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.container {
+  position: relative;
+  width: 100vw;
+}
+.container > h1 {
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  translate: -50% -50%;
+  color: white;
+  font-size: 25px;
+}
+#scroll-wrapper {
+  position: relative;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+#scroll-wrapper > div {
+  scroll-snap-align: start;
+  background-color: teal;
+  width: 100vw;
+  height: 100vh;
+}
+.timeline {
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+.container:first-child > .timeline {
+  left: 50%;
+  width: 50%;
+}
+.container:last-child > .timeline {
+  width: 50%;
+}
+.timeline-pointer {
+  position: absolute;
+  top: 0;
+  translate: -50% -37.5%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+.timeline-pointer:first-child {
+  left: 25%;
+}
+.timeline-pointer:last-child {
+  left: 75%;
+}
+.container:first-child > .timeline > .timeline-pointer {
+  left: 0;
+}
+.container:last-child > .timeline > .timeline-pointer {
+  left: 100%;
+}
+.history-card {
+  width: 30%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.history-card > h1 {
+  padding: 0 10px;
+  background-color: white;
+  color: teal;
+  font-size: 25px;
+  display: flex;
+}
+.history-card > h1::before {
+  content: "";
+  flex: 1;
+  transform: skew(-50deg) translateX(-30px);
+  background-color: teal;
+}
+.history-card > p {
+  padding: 5px 10px;
+  font-weight: 700;
+  border-right: 20px solid white;
+  box-sizing: border-box;
+  flex: 1;
+}
+.history-card.top {
+  position: absolute;
+  top: calc(40vh - 100px);
+  left: 25%;
+  translate: -50% 0;
+}
+.history-card.bottom {
+  position: absolute;
+  top: 60vh;
+  left: 75%;
+  translate: -50% 0;
+}
+.container:first-child > .history-card,
+.container:last-child > .history-card {
+  position: absolute;
+  top: 60vh;
+  left: 50%;
+  translate: -50% 0;
+}
