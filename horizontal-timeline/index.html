@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <nav id="navbar">
       <div class="nav">
         <h1>Badan Pengurus Harian HMTI</h1>
       </div>
     </nav>
+
     <main id="scroll-wrapper">
       <section id="wrapper">
         <div class="container">
@@ -100,6 +102,13 @@
         </div>
       </section>
     </main>
+
+    <!-- <footer id="footer">
+      <div class="foot">
+        <p>©️ 2024 rizal mohamad all rights reserved</p>
+      </div>
+    </footer> -->
+
     <script>
       let scrollWrapper = document.getElementById("scroll-wrapper");
       let wrapper = document.getElementById("wrapper");
@@ -111,5 +120,6 @@
         wrapper.style.left = "-" + (scrollWrapper.scrollTop / (scrollWrapper.scrollHeight - scrollWrapper.clientTop)) * wrapper.clientWidth + "px";
       };
     </script>
+
   </body>
 </html>
